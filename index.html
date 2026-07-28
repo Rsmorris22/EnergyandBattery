@@ -44,10 +44,10 @@
     position:sticky; top:0; z-index:20;
     background:var(--paper); border-bottom:1px solid var(--line);
   }
-  .header-inner{ display:flex; align-items:center; justify-content:space-between; padding:18px 0; }
-  .brand{ font-family:'Fraunces', serif; font-weight:600; font-size:1.15rem; display:flex; align-items:center; gap:10px; }
+  .header-inner{ display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px 16px; padding:18px 0; }
+  .brand{ font-family:'Fraunces', serif; font-weight:600; font-size:1.15rem; display:flex; align-items:center; gap:10px; min-width:0; flex-shrink:1; }
   .brand span{ color:var(--brass-dark); }
-  .brand-icon{ width:30px; height:30px; flex-shrink:0; }
+  .brand-icon{ width:32px; height:32px; flex-shrink:0; }
   nav{ display:flex; align-items:center; gap:26px; font-size:0.92rem; }
   nav a.navlink{ text-decoration:none; opacity:0.8; }
   nav a.navlink:hover{ opacity:1; }
@@ -208,6 +208,7 @@
     .disclosure-box{ padding:16px 18px; }
     .header-inner{ padding:14px 0; }
     .brand{ font-size:1rem; }
+    .brand-icon{ width:26px; height:26px; }
     .path-card{ padding:16px; }
     .path-card h3{ font-size:1.1rem; }
     .photo-banner{ height:170px; }
@@ -222,9 +223,9 @@
   <div class="wrap header-inner">
     <div class="brand">
       <svg class="brand-icon" viewBox="0 0 260 270" xmlns="http://www.w3.org/2000/svg">
-        <path d="M108,10 L148,10 L148,68 L168,68 L168,95 L210,150 L238,178 L248,210 L233,232 L210,252 L185,258 L160,248 L135,232 L110,215 L88,196 L68,178 L48,155 L30,135 L14,118 L4,102 L20,90 L34,95 L40,72 L58,52 L80,32 L95,18 Z"
-          fill="#1B2A6B" stroke="#1FAE5C" stroke-width="6" stroke-linejoin="round"/>
-        <path d="M150,100 L100,190 L128,190 L108,250 L170,160 L140,160 L155,100 Z" fill="#1FAE5C"/>
+        <path d="M95,8 L150,8 L150,55 L175,55 L175,80 L225,145 L240,180 L225,215 L195,240 L150,225 L105,200 L70,175 L45,145 L20,120 L8,95 L25,85 L35,60 L60,30 Z"
+          fill="#1B2A6B" stroke="#1FAE5C" stroke-width="9" stroke-linejoin="round"/>
+        <path d="M148,95 L105,175 L130,175 L112,225 L165,150 L138,150 L150,95 Z" fill="#1FAE5C"/>
       </svg>
       Texas <span>Home Battery</span>
     </div>
