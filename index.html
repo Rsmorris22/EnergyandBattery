@@ -14,7 +14,6 @@
     --brass:#1FAE5C;
     --brass-dark:#16793F;
     --teal-ink:#1B2A6B;
-    --stamp-red:#8C3B2E;
     --white:#FFFFFF;
     --line: rgba(26,29,31,0.14);
   }
@@ -69,23 +68,17 @@
   .trust-bit{ font-family:'Space Mono', monospace; font-size:0.8rem; display:flex; align-items:center; gap:8px; }
   .trust-bit::before{ content:"—"; color:var(--brass-dark); }
 
-  /* Stamp */
-  .stamp-wrap{ display:flex; justify-content:center; padding-top:8px; }
-  .stamp{
-    width:200px; height:200px; border-radius:50%;
-    border:2.5px solid var(--stamp-red);
-    color:var(--stamp-red);
-    display:flex; align-items:center; justify-content:center;
-    text-align:center; position:relative;
-    transform:rotate(-8deg);
-    font-family:'Space Mono', monospace;
-    opacity:0.92;
+  /* Disclosure badge */
+  .badge-wrap{ display:flex; justify-content:center; padding-top:8px; }
+  .disclosure-badge{
+    background:var(--white); border:1px solid var(--line); border-top:4px solid var(--brass);
+    border-radius:10px; padding:28px 26px; text-align:center; max-width:260px;
   }
-  .stamp::before{
-    content:""; position:absolute; inset:10px; border-radius:50%; border:1px solid var(--stamp-red); opacity:0.6;
-  }
-  .stamp-text{ padding:22px; font-size:0.68rem; letter-spacing:0.06em; text-transform:uppercase; line-height:1.5; }
-  .stamp-text strong{ display:block; font-size:0.92rem; margin-bottom:6px; letter-spacing:0.02em; }
+  .disclosure-badge .badge-icon{ width:40px; height:40px; margin:0 auto 14px; }
+  .disclosure-badge .eyebrow{ margin-bottom:10px; }
+  .disclosure-badge p.name{ font-family:'Fraunces', serif; font-weight:600; font-size:1.05rem; margin-bottom:4px; }
+  .disclosure-badge p.role{ font-size:0.86rem; opacity:0.75; margin-bottom:10px; }
+  .disclosure-badge p.fine{ font-size:0.76rem; opacity:0.6; padding-top:10px; border-top:1px solid var(--line); }
 
   /* Photo banner */
   .photo-banner{ position:relative; height:300px; overflow:hidden; }
@@ -185,8 +178,7 @@
     .transparency, .products, .testimonials, .review-form, .faq{ padding:36px 0; }
     nav .navlink, nav .btn{ display:none; }
     .mobile-cta{ display:inline-block; }
-    .stamp-wrap{ padding-top:28px; }
-    .stamp{ width:170px; height:170px; }
+    .badge-wrap{ padding-top:28px; }
     .form-actions{ flex-direction:column; align-items:flex-start; gap:14px; }
     input, select{ font-size:16px; }
     .path-card{ padding:20px; }
@@ -201,9 +193,7 @@
     .wrap{ padding:0 18px; }
     .hero h1{ font-size:1.6rem; }
     .review-form h2, .products h2, .testimonials h2, .faq h2{ font-size:1.4rem; }
-    .stamp{ width:150px; height:150px; }
-    .stamp-text{ padding:14px; font-size:0.6rem; }
-    .stamp-text strong{ font-size:0.78rem; }
+    .disclosure-badge{ padding:22px 20px; max-width:none; }
     .trust-bits{ flex-direction:column; gap:10px; }
     .disclosure-box{ padding:16px 18px; }
     .header-inner{ padding:14px 0; }
@@ -222,10 +212,10 @@
 <header>
   <div class="wrap header-inner">
     <div class="brand">
-      <svg class="brand-icon" viewBox="0 0 260 270" xmlns="http://www.w3.org/2000/svg">
-        <path d="M95,8 L150,8 L150,55 L175,55 L175,80 L225,145 L240,180 L225,215 L195,240 L150,225 L105,200 L70,175 L45,145 L20,120 L8,95 L25,85 L35,60 L60,30 Z"
-          fill="#1B2A6B" stroke="#1FAE5C" stroke-width="9" stroke-linejoin="round"/>
-        <path d="M148,95 L105,175 L130,175 L112,225 L165,150 L138,150 L150,95 Z" fill="#1FAE5C"/>
+      <svg class="brand-icon" viewBox="0 0 260 260" xmlns="http://www.w3.org/2000/svg">
+        <rect x="8" y="8" width="244" height="244" rx="58" fill="#1B2A6B"/>
+        <path d="M130.0,30.0 L152.3,99.3 L225.1,99.1 L166.1,141.7 L188.8,210.9 L130.0,168.0 L71.2,210.9 L93.9,141.7 L34.9,99.1 L107.7,99.3 Z"
+          fill="#FFFFFF" stroke="#1FAE5C" stroke-width="5" stroke-linejoin="round"/>
       </svg>
       Texas <span>Home Battery</span>
     </div>
@@ -264,14 +254,17 @@
       </div>
       <p style="font-size:0.82rem; opacity:0.7; margin-top:14px; max-width:44ch;">Already know you want to switch? Enroll yourself anytime at <a href="https://thinkresidual.com" target="_blank" rel="noopener" style="text-decoration:underline;">thinkresidual.com</a>.</p>
     </div>
-    <div class="stamp-wrap">
-      <div class="stamp">
-        <div class="stamp-text">
-          <strong>Disclosed &amp; Independent</strong>
-          Ryan Morris<br>
-          Independent Think+<br>Energy Advisor<br>
-          Not Think's corporate site
-        </div>
+    <div class="badge-wrap">
+      <div class="disclosure-badge">
+        <svg class="badge-icon" viewBox="0 0 260 260" xmlns="http://www.w3.org/2000/svg">
+          <rect x="8" y="8" width="244" height="244" rx="58" fill="#1B2A6B"/>
+          <path d="M130.0,30.0 L152.3,99.3 L225.1,99.1 L166.1,141.7 L188.8,210.9 L130.0,168.0 L71.2,210.9 L93.9,141.7 L34.9,99.1 L107.7,99.3 Z"
+            fill="#FFFFFF" stroke="#1FAE5C" stroke-width="5" stroke-linejoin="round"/>
+        </svg>
+        <p class="eyebrow">Disclosed &amp; independent</p>
+        <p class="name">Ryan Morris</p>
+        <p class="role">Independent Think+ Energy Advisor</p>
+        <p class="fine">Not Think's corporate site</p>
       </div>
     </div>
   </div>
