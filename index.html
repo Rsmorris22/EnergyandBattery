@@ -45,8 +45,9 @@
     background:var(--paper); border-bottom:1px solid var(--line);
   }
   .header-inner{ display:flex; align-items:center; justify-content:space-between; padding:18px 0; }
-  .brand{ font-family:'Fraunces', serif; font-weight:600; font-size:1.15rem; }
+  .brand{ font-family:'Fraunces', serif; font-weight:600; font-size:1.15rem; display:flex; align-items:center; gap:10px; }
   .brand span{ color:var(--brass-dark); }
+  .brand-icon{ width:30px; height:30px; flex-shrink:0; }
   nav{ display:flex; align-items:center; gap:26px; font-size:0.92rem; }
   nav a.navlink{ text-decoration:none; opacity:0.8; }
   nav a.navlink:hover{ opacity:1; }
@@ -95,6 +96,9 @@
   }
   .photo-banner-caption{ position:absolute; left:0; right:0; bottom:0; padding:24px 28px; z-index:2; color:var(--white); }
   .photo-banner-caption p{ font-family:'Fraunces', serif; font-size:1.2rem; max-width:38ch; }
+  .top-banner{ height:380px; }
+  .top-banner-caption{ padding:32px 28px; }
+  .top-banner-caption h2{ font-family:'Fraunces', serif; font-weight:600; color:var(--white); font-size:2.1rem; line-height:1.15; max-width:16ch; }
 
   /* Two-path chooser */
   .products{ padding:52px 0; }
@@ -111,7 +115,7 @@
   .path-icon{ width:36px; height:36px; margin-bottom:12px; }
   .path-icon svg{ width:100%; height:100%; }
   .path-thumb{ border-radius:6px; overflow:hidden; margin-top:16px; }
-  .path-thumb img{ width:100%; height:130px; object-fit:cover; display:block; }
+  .path-thumb img{ width:100%; height:190px; object-fit:cover; object-position:center 55%; display:block; }
   .also-available{ font-size:0.86rem; opacity:0.75; margin-top:22px; max-width:64ch; }
   .also-available b{ color:var(--teal-ink); }
 
@@ -189,6 +193,8 @@
     .paths{ gap:16px; }
     .photo-banner{ height:200px; }
     .photo-banner-caption p{ font-size:1rem; }
+    .top-banner{ height:280px; }
+    .top-banner-caption h2{ font-size:1.5rem; max-width:14ch; }
   }
 
   @media (max-width: 480px){
@@ -205,6 +211,8 @@
     .path-card{ padding:16px; }
     .path-card h3{ font-size:1.1rem; }
     .photo-banner{ height:170px; }
+    .top-banner{ height:230px; }
+    .top-banner-caption h2{ font-size:1.25rem; }
   }
 </style>
 </head>
@@ -212,7 +220,14 @@
 
 <header>
   <div class="wrap header-inner">
-    <div class="brand">Clearline <span>Rate Review</span></div>
+    <div class="brand">
+      <svg class="brand-icon" viewBox="0 0 260 270" xmlns="http://www.w3.org/2000/svg">
+        <path d="M108,10 L148,10 L148,68 L168,68 L168,95 L210,150 L238,178 L248,210 L233,232 L210,252 L185,258 L160,248 L135,232 L110,215 L88,196 L68,178 L48,155 L30,135 L14,118 L4,102 L20,90 L34,95 L40,72 L58,52 L80,32 L95,18 Z"
+          fill="#1B2A6B" stroke="#1FAE5C" stroke-width="6" stroke-linejoin="round"/>
+        <path d="M150,100 L100,190 L128,190 L108,250 L170,160 L140,160 L155,100 Z" fill="#1FAE5C"/>
+      </svg>
+      Texas <span>Home Battery</span>
+    </div>
     <nav>
       <a class="navlink" href="#battery">Home Battery</a>
       <a class="navlink" href="#reviews">Reviews</a>
@@ -223,6 +238,13 @@
     <a class="btn btn-primary mobile-cta" href="#start">Get my free analysis</a>
   </div>
 </header>
+
+<div class="photo-banner top-banner">
+  <img src="storm-battery-backup.jpg" alt="Home battery backup during a storm" loading="lazy">
+  <div class="photo-banner-caption top-banner-caption">
+    <h2>Get a home battery — no cost for equipment or installation.</h2>
+  </div>
+</div>
 
 <section class="hero">
   <div class="wrap hero-grid">
@@ -254,13 +276,6 @@
   </div>
 </section>
 
-<div class="photo-banner">
-  <img src="storm-battery-backup.jpg" alt="Home battery backup during a storm" loading="lazy">
-  <div class="photo-banner-caption">
-    <p>A battery won't stop the storm — but it can help keep your lights on when the grid can't.</p>
-  </div>
-</div>
-
 <section class="products" id="battery">
   <div class="wrap">
     <p class="eyebrow">Two ways this could go</p>
@@ -278,7 +293,8 @@
         <h3>Customer + home battery</h3>
         <p style="font-size:0.94rem; opacity:0.85;">A whole-home battery — no cost for the equipment and no installation fees — paired with a fixed-rate electricity plan.</p>
         <ul>
-          <li>Up to 40 kWh capacity, installed by certified technicians</li>
+          <li>EcoFlow OCEAN Pro system — up to 40 kWh capacity, installed by certified technicians</li>
+          <li>Named to TIME's Best Inventions of 2025 list (Green Energy category)</li>
           <li>Switches on automatically the moment the grid goes down</li>
           <li>No cost for equipment. No installation fees.</li>
           <li>Refundable $99 reservation fee, returned after your first billing period</li>
